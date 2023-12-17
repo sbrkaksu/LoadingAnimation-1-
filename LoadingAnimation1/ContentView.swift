@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    //An array hold the status of each cirle respectively
     @State private var isCircleBig = [false, false, false]
+    //Delay for the execution times for each circle
     @State private var delay = [0.0, 0.2, 0.4]
     
     var body: some View {
         HStack{
+            //Iterate both arrays
             ForEach(0..<3){index in
                 Circle()
                     .foregroundColor(.gray)
