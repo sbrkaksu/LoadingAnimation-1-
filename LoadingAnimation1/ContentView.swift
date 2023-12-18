@@ -23,6 +23,7 @@ struct ContentView: View {
                     .frame(width: isCircleBig[index] ? 15 : 0, height: isCircleBig[index] ? 15 : 0)
                     .animation(.easeIn(duration: 0.7).repeatForever(), value: isCircleBig[index])
                     .onAppear{
+                        //Pospone the start time of animation respectively
                         DispatchQueue.main.asyncAfter(deadline: .now() + delay[index]) {
                             self.isCircleBig[index] = true
                         }
